@@ -57,4 +57,6 @@ it's going to throw an error.
 
 ## The Solution
 
-Be careful when you are referencing your classes to be consistent with how you load up your classes, or you're going to have a bad time.
+If you want to use the namespace approach to putting your classes is sub-folders then go ahead, if you want to use underscores then thats cool too, but make sure you reference it right.
+
+Referencing it the wrong way around might load up the right file, but the classes aren't going to match, so if you do it wrong you're going to get errors. If you're using a third-party autoload that tries to hit these files wrong then stop using that crazy autoloader, it's drunk.
