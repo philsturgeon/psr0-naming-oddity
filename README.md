@@ -27,8 +27,7 @@ with the following content...:
 
 	$instance = new Package\Foo_Bar_Baz();
 
-You can use either (or probably some whacky combination) but if you try to use both to 
-reference the same file you will get unexpected results.
+Using either of these (or probably some whacky combination) will try to load up the `src/Foo/Bar/Baz.php` file, but only the first will instantiate it correctly.
 
 ## The Test
 
@@ -52,8 +51,9 @@ around and instantiate `new Package\Foo_Bar_Baz()` then `new Package\Foo\Bar\Baz
 	$  php test2.php
 	PHP Fatal error:  Class 'Test\Package\Foo_Bar_Baz' not found in /tmp/test/test2.php on line 10
 
-It seems to work fine one way around, but it's not too happy if you try doing underscores 
-then namespaces.
+Because the `Test\Package\Foo_Bar_Baz` is converted to `Test/Package/Foo/Bar/Baz.php` but 
+the class names do not match (remember it is defined in `namespace Test\Package\Foo\Bar`) 
+it's going to throw an error.
 
 ## The Solution
 
