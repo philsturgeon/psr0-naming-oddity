@@ -7,7 +7,7 @@ This highlights an oddity in PSR-0 which will cause errors if you instantiate cl
 There is an oddity in the way PSR-0 will let you load classes which is relatively well 
 known in the PHP-FIG but often confuses folks who were not expecting it.
 
-Anthony Ferrera (a core PHP contributor) used this as one of the reasons he [did not want 
+Anthony Ferrara (a core PHP contributor) used this as one of the reasons he [did not want 
 to see PSR-0 merged into PHP itself](http://blog.ircmaxell.com/2011/11/on-psr-0-being-included-in-phps-core.html).
 
 It was also brought up as an issue on the PHP-FIG issues area: [Underscore can cause duplicate file inclusion](https://github.com/php-fig/fig-standards/issues/83). 
